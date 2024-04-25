@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  position: relative;
+  background: grey;
+  width: 100%;
+  min-height: 100vh;
+}
+.container {
+  position: absolute;
+  width: 50%;
+  height: 100px;
+  border-radius: 10px;
+  background-color: bisque;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 5rem;
+  color: brown;
+}
+
+.container::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  left: -5%;
+  top: -30%;
+  background: brown;
+  border-radius: 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  right: -5%;
+  bottom: -30%;
+  background: brown;
+  border-radius: 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+/* .clock span::before {
+  content: "Hours";
+  color: brown;
+  position: absolute;
+  font-size: 20px;
+  bottom: -5%;
+} */
